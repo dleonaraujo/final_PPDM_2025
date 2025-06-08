@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="16dp">
+
+    <TextView android:id="@+id/tvAverageScore"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Promedio: " android:textSize="18sp"/>
+
+    <TextView android:id="@+id/tvTotalGames"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Total de partidas: " android:textSize="18sp" />
+
+    <TextView android:id="@+id/tvHistoryTitle"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Historial de partidas:" android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@+id/containerHistory"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+</LinearLayout>

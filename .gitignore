@@ -1,0 +1,118 @@
+# Ignorar archivos y directorios generados por Android Studio y Gradle
+
+## Build y Generados
+.gradle/
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries/
+.DS_Store
+build/
+app/build/
+*.iml
+*.ap_
+*.apk
+*.aab
+*.aar
+*.json # Puede ser necesario ignorar archivos JSON generados si no son parte de los recursos fijos
+
+## Archivos de Depuración y de Usuario
+captures/
+.externalNativeBuild/
+.cxx/
+/dataBindingBuildOutput/
+
+## Archivos de Configuración del IDE
+.idea/
+!.idea/encodings.xml
+!.idea/misc.xml
+!.idea/gradle.xml
+!.idea/modules.xml
+!.idea/vcs.xml
+!.idea/codeStyles/
+!.idea/inspectionProfiles/
+!.idea/copyright/
+!.idea/dictionaries/
+!.idea/fileTemplates/
+!.idea/scopes/
+!.idea/shelf/
+!.idea/watcherTasks.xml
+!.idea/androidBuildTarget.xml
+!.idea/deploymentTargetDropDown.xml
+!.idea/render_assets/
+
+## Archivos de Recursos Temporales (para proyectos con assets grandes)
+# assets/
+# res/raw/
+
+## Otros archivos temporales
+*.swp
+*.bak
+*.swo
+*~
+*.log
+!gradle-wrapper.jar # No ignorar el wrapper de Gradle, es útil para que otros puedan construir el proyecto fácilmente
+
+## Firmas de Depuración (si las usas para pruebas)
+debug.keystore
+
+## Archivos de Caché de Gradle
+.gradle/
+gradle/.gradle/
+
+## Archivos de Android Lint
+lint-results.html
+lint-results.xml
+
+## Archivos de ProGuard / R8 (si están configurados)
+-keep.txt
+-dontwarn.txt
+
+## Directorios de NDK
+obj/
+libs/
+!libs/*.jar # No ignorar los JARs si los agregas manualmente a la carpeta libs
+
+## Archivos de Pruebas
+# Si tienes archivos de pruebas que generan resultados temporales
+# test-results/
+# androidTest-results/
+
+## Directorios y Archivos de Android Studio específicos del usuario
+.AndroidStudio*/
+studio.vmoptions
+studio64.vmoptions
+
+## Archivos generados por el plugin de Kotlin
+kotlin-build/
+
+## Archivos de caché del emulador de Android
+avd/
+
+## Directorios de salida de Android Instant Apps
+instant_app_packages/
+
+## Directorios de archivos de caché de Jetifier
+.jetifier/
+
+## Archivos de metadatos de Git (en caso de que se creen por error)
+.git/config
+.git/description
+.git/HEAD
+.git/hooks/
+.git/info/
+.git/logs/
+.git/objects/
+.git/refs/
+.git/packed-refs
+.git/index
+.git/COMMIT_EDITMSG
+.git/ORIG_HEAD
+.git/MERGE_HEAD
+.git/FETCH_HEAD
+
+# Archivos de la base de datos (si usas una base de datos local como SQLite)
+# *.db
+
+# Archivos de caché de dependencias (para proyectos con muchas dependencias)
+# .idea/libraries
+# .idea/gradle.xml

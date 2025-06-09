@@ -11,11 +11,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         findViewById<Button>(R.id.btnStartGame).setOnClickListener {
-            // startActivity(Intent(this, GameActivity::class.java))
+            startActivity(Intent(this, GameActivity::class.java))
         }
 
         findViewById<Button>(R.id.btnStats).setOnClickListener {
-            // startActivity(Intent(this, StatsActivity::class.java))
+            startActivity(Intent(this, StatsActivity::class.java))
         }
     }
 }

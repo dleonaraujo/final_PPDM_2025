@@ -7,8 +7,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.ppdm.app_math_trainner.db.AppDatabase
-import  com.ppdm.app_math_trainner.db.GameResult
-import  com.ppdm.app_math_trainner.util.MathGenerator
+import com.ppdm.app_math_trainner.db.GameResult
+import com.ppdm.app_math_trainner.util.MathGenerator
 import kotlinx.coroutines.launch
 import kotlin.random.Random
 
@@ -18,7 +18,7 @@ class GameActivity : AppCompatActivity() {
     private lateinit var tvScore: TextView
     private lateinit var buttons: List<Button>
 
-    private var correctAnswer = 0
+    private var correctAnswer = 0.0
     private var score = 0
     private var correctCount = 0
     private var totalCount = 0
@@ -62,10 +62,11 @@ class GameActivity : AppCompatActivity() {
         correctAnswer = answer
         tvQuestion.text = "$question = ?"
 
-        val options = mutableSetOf<Int>()
+        val options = mutableSetOf<Double>()
         options.add(answer)
         while (options.size < 4) {
-            options.add(answer + Random.nextInt(-10, 10))
+            val opcion = answer + Random.nextDouble(-200.0, 200.0)
+            options.add(String.format("%.2f", opcion).toDouble())
         }
 
         val shuffled = options.shuffled()

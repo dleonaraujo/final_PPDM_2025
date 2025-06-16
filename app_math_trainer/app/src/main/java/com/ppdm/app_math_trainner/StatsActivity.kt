@@ -42,6 +42,7 @@ class StatsActivity : AppCompatActivity() {
                     val text = TextView(this@StatsActivity)
                     val date = formatter.format(Date(it.dateTime))
                     text.text = "[$date] Puntos: ${it.score}, Correctas: ${it.correctAnswers}/${it.totalQuestions}"
+                    text.setTextColor(android.graphics.Color.WHITE)
                     containerHistory.addView(text)
                 }
             }

@@ -1,24 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical" android:padding="16dp">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/bg_gradient"
+    android:padding="24dp">
 
-    <TextView android:id="@+id/tvAverageScore"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="Promedio: " android:textSize="18sp"/>
+    <!-- Nubes decorativas de fondo superior -->
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:src="@drawable/cloud_1"
+        android:alpha="0.6"
+        android:layout_gravity="start"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp" />
 
-    <TextView android:id="@+id/tvTotalGames"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="Total de partidas: " android:textSize="18sp" />
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:src="@drawable/cloud_2"
+        android:alpha="0.4"
+        android:layout_gravity="end"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="-30dp" />
 
-    <TextView android:id="@+id/tvHistoryTitle"
-        android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="Historial de partidas:" android:textStyle="bold"
-        android:layout_marginTop="16dp" />
+    <!-- Título principal -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📊 Estadísticas"
+        android:textSize="28sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
+        android:background="@drawable/bg_question"
+        android:elevation="4dp"
+        android:shadowColor="#80000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="3" />
 
-    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
-        <LinearLayout android:id="@+id/containerHistory"
-            android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:orientation="vertical" />
+    <!-- Contenedor de estadísticas principales -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="8dp"
+        android:gravity="center"
+        android:weightSum="2">
+
+        <!-- Promedio -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bg_timer_enhanced"
+            android:padding="16dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⭐ PROMEDIO"
+                android:textSize="14sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tvAverageScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0"
+                android:textSize="24sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Total de partidas -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bg_score"
+            android:padding="16dp"
+            android:layout_marginStart="8dp"
+            android:elevation="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎮 PARTIDAS"
+                android:textSize="14sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tvTotalGames"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="24sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Nube decorativa intermedia -->
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="45dp"
+        android:src="@drawable/cloud_3"
+        android:alpha="0.5"
+        android:layout_gravity="end"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="12dp" />
+
+    <!-- Título del historial -->
+    <TextView
+        android:id="@+id/tvHistoryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📜 Historial de Partidas"
+        android:textSize="22sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        android:background="@drawable/bg_question"
+        android:elevation="4dp"
+        android:shadowColor="#80000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="3" />
+
+    <!-- ScrollView para el historial -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="8dp"
+        android:padding="8dp"
+        android:background="@drawable/bg_history_container"
+        android:elevation="2dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/containerHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp" />
     </ScrollView>
+
+    <!-- Nubes decorativas inferiores -->
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:src="@drawable/cloud_1"
+        android:alpha="0.3"
+        android:layout_gravity="start"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp" />
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="35dp"
+        android:src="@drawable/cloud_2"
+        android:alpha="0.4"
+        android:layout_gravity="end"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="-20dp" />
+
 </LinearLayout>

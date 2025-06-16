@@ -1,57 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical" android:padding="16dp"
-    android:gravity="center_horizontal">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/bg_gradient"
+    android:padding="24dp">
 
+    <!-- Nubes decorativas de fondo -->
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:src="@drawable/cloud_1"
+        android:alpha="0.6"
+        android:layout_gravity="start"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:src="@drawable/cloud_2"
+        android:alpha="0.4"
+        android:layout_gravity="end"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="-30dp" />
+
+    <!-- Timer con efecto de pulsación -->
     <TextView
         android:id="@+id/tvTimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="60"
-        android:textSize="32sp"
-        android:padding="8dp" />
+        android:textSize="42sp"
+        android:textColor="#FFFFFF"
+        android:padding="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_timer_enhanced"
+        android:textStyle="bold"
+        android:elevation="8dp"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4" />
 
+    <!-- Pregunta con animación -->
     <TextView
         android:id="@+id/tvQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="3 + 5 ="
-        android:textSize="28sp"
-        android:layout_marginTop="20dp" />
+        android:textSize="32sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginTop="32dp"
+        android:padding="12dp"
+        android:background="@drawable/bg_question"
+        android:elevation="4dp"
+        android:shadowColor="#80000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="3" />
 
+    <!-- Contenedor de botones con espaciado mejorado -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="28dp"
+        android:layout_marginHorizontal="16dp"
+        android:gravity="center_horizontal">
 
         <Button
             android:id="@+id/btnOption1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="56dp"
+            android:layout_marginVertical="8dp"
+            android:background="@drawable/btn_option_orange"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:elevation="6dp"
+            android:stateListAnimator="@animator/button_press" />
 
         <Button
             android:id="@+id/btnOption2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="56dp"
+            android:layout_marginVertical="8dp"
+            android:background="@drawable/btn_option_blue"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:elevation="6dp"
+            android:stateListAnimator="@animator/button_press" />
 
         <Button
             android:id="@+id/btnOption3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="56dp"
+            android:layout_marginVertical="8dp"
+            android:background="@drawable/btn_option_green"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:elevation="6dp"
+            android:stateListAnimator="@animator/button_press" />
 
         <Button
             android:id="@+id/btnOption4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="56dp"
+            android:layout_marginVertical="8dp"
+            android:background="@drawable/btn_option_red"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:elevation="6dp"
+            android:stateListAnimator="@animator/button_press" />
     </LinearLayout>
 
+    <!-- Más nubes decorativas -->
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="45dp"
+        android:src="@drawable/cloud_3"
+        android:alpha="0.5"
+        android:layout_gravity="start"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp" />
+
+    <!-- Score con diseño mejorado -->
     <TextView
         android:id="@+id/tvScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Puntos: 0"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp"/>
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        android:background="@drawable/bg_score"
+        android:elevation="4dp"
+        android:shadowColor="#80000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="3" />
+
+    <!-- Nube final -->
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:src="@drawable/cloud_1"
+        android:alpha="0.3"
+        android:layout_gravity="end"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="8dp" />
+
 </LinearLayout>

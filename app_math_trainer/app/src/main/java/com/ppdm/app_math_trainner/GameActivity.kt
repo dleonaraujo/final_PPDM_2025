@@ -11,12 +11,14 @@ import com.ppdm.app_math_trainner.db.GameResult
 import com.ppdm.app_math_trainner.util.MathGenerator
 import kotlinx.coroutines.launch
 import kotlin.random.Random
+import android.media.MediaPlayer
 
 class GameActivity : AppCompatActivity() {
     private lateinit var tvQuestion: TextView
     private lateinit var tvTimer: TextView
     private lateinit var tvScore: TextView
     private lateinit var buttons: List<Button>
+    private var mediaPlayer: MediaPlayer? = null
 
     private var correctAnswer = 0.0
     private var score = 0
@@ -28,6 +30,11 @@ class GameActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.music_theme)
+        mediaPlayer?.isLooping = true // Repetir en bucle
+        mediaPlayer?.start()
+
 
         tvQuestion = findViewById(R.id.tvQuestion)
         tvTimer = findViewById(R.id.tvTimer)
@@ -97,4 +104,11 @@ class GameActivity : AppCompatActivity() {
             )
         }
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mediaPlayer?.release()
+        mediaPlayer = null
+    }
+
 }

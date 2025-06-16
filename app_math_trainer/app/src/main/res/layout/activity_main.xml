@@ -1,17 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:gravity="center" android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bg_gradient"
+    android:padding="24dp">
 
-    <Button
-        android:id="@+id/btnStartGame"
+    <!-- Nubes decorativas superiores -->
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:src="@drawable/cloud_2"
+        android:alpha="0.5"
+        android:layout_gravity="start"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:src="@drawable/cloud_1"
+        android:alpha="0.6"
+        android:layout_gravity="end"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="-40dp"
+        android:layout_marginBottom="40dp" />
+
+    <!-- Título del juego -->
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jugar" />
+        android:text="QUIZ MATEMÁTICO"
+        android:textSize="36sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:padding="16dp"
+        android:background="@drawable/bg_question"
+        android:elevation="6dp"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4" />
 
-    <Button
-        android:id="@+id/btnStats"
+    <!-- Subtítulo -->
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Estadísticas" />
+        android:text="¡Pon a prueba tus habilidades!"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="italic"
+        android:layout_marginBottom="40dp"
+        android:alpha="0.9" />
+
+    <!-- Contenedor de botones principales -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="32dp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnStartGame"
+            android:layout_width="280dp"
+            android:layout_height="64dp"
+            android:layout_marginVertical="12dp"
+            android:background="@drawable/btn_option_green"
+            android:text="🎮 JUGAR"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:elevation="8dp"
+            android:stateListAnimator="@animator/button_press" />
+
+        <Button
+            android:id="@+id/btnStats"
+            android:layout_width="280dp"
+            android:layout_height="64dp"
+            android:layout_marginVertical="12dp"
+            android:background="@drawable/btn_option_blue"
+            android:text="📊 ESTADÍSTICAS"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:elevation="8dp"
+            android:stateListAnimator="@animator/button_press" />
+
+    </LinearLayout>
+
+    <!-- Nubes decorativas centrales -->
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="45dp"
+        android:src="@drawable/cloud_3"
+        android:alpha="0.4"
+        android:layout_gravity="start"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp" />
+
+    <ImageView
+        android:layout_width="65dp"
+        android:layout_height="40dp"
+        android:src="@drawable/cloud_1"
+        android:alpha="0.5"
+        android:layout_gravity="end"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="-25dp" />
+
+    <!-- Información adicional -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Versión 1.0"
+        android:textSize="14sp"
+        android:textColor="#FFFFFF"
+        android:alpha="0.7"
+        android:layout_marginTop="40dp"
+        android:padding="8dp"
+        android:background="@drawable/bg_score"
+        android:elevation="2dp" />
+
+    <!-- Nubes decorativas inferiores -->
+    <ImageView
+        android:layout_width="55dp"
+        android:layout_height="35dp"
+        android:src="@drawable/cloud_2"
+        android:alpha="0.3"
+        android:layout_gravity="start"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp" />
+
 </LinearLayout>

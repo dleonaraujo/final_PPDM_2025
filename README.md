@@ -1,4 +1,3 @@
-````markdown
 # 📱 MathTrainer: Entrenador de Matemáticas Rápidas
 
 **Curso:** Programación para Dispositivos Móviles  

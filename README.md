@@ -42,19 +42,19 @@ El objetivo principal es mejorar el cálculo mental, promoviendo el aprendizaje 
 ### 🟢 Pantalla de Inicio
 
 <p align="center">
-  <img src="screenshots/inicio.png" alt="Pantalla de inicio" width="250"/>
+  <img src="screenshots/inicio.jpeg" alt="Pantalla de inicio" width="250"/>
 </p>
 
 ### 🧠 Juego Principal
 
 <p align="center">
-  <img src="screenshots/juego.png" alt="Juego principal" width="250"/>
+  <img src="screenshots/juego.jpeg" alt="Juego principal" width="250"/>
 </p>
 
 ### 📊 Historial de Partidas
 
 <p align="center">
-  <img src="screenshots/historial.png" alt="Historial de partidas" width="250"/>
+  <img src="screenshots/historial.jpeg" alt="Historial de partidas" width="250"/>
 </p>
 
 ---

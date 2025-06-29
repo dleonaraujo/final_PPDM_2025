@@ -26,7 +26,7 @@ El objetivo principal es mejorar el cálculo mental, promoviendo el aprendizaje 
 
    ```bash
    git clone https://github.com/tu-usuario/mathtrainer.git
-````
+   ```
 
 2. Abre Android Studio y selecciona `Open an existing project`. Busca la carpeta del proyecto descargado.
 
